@@ -189,10 +189,11 @@
                 </div>
             </div>
             <!-- Seat Selection Area -->
-            <section class="bg-[#FFFFFF] min-h-screen mx-auto container mt-12 border-2 rounded-3xl">
-                <div id="left-side">
-                    <h1 class="raleway-font font-semibold text-2xl text-[#030712]">Select Your Seat</h1>
-                    <div class="flex gap-32 items-center border-t-2 border-b-2 border-dashed border-[#03071233]">
+            <section class="bg-[#FFFFFF] min-h-screen mx-auto container mt-12 border-2 rounded-3xl flex gap-36">
+                <div id="left-side" class="border-r-2 pr-20 border-dashed">
+                    <h1 class="raleway-font font-semibold text-2xl text-[#030712] ml-4">Select Your Seat</h1>
+                    <div
+                        class="flex gap-32 justify-between my-3 items-center border-t-2 border-b-2 border-dashed border-[#03071233]">
                         <div><img src="./images/seat-gray.png" alt="seat gray" class="inline">
                             <span>Available</span>
                         </div>
@@ -328,11 +329,12 @@
                     </div>
                 </div>
                 <div id="righ-side">
-                    <h1 class="raleway-font font-semibold text-2xl border-b-2 border-dashed text-[#030712]">Select Your
+                    <h1 class="raleway-font font-semibold text-2xl border-b-2 border-dashed text-[#030712] w-[409px]">
+                        Select Your
                         Seat
                     </h1>
                     <!-- Pricing  Calculation First UI -->
-                    <div class="bg-[#F7F8F8] max-w-[433px] max-h-[335px] container">
+                    <div class="bg-[#F7F8F8] max-w-[433px] h-[300px] container border-2 rounded-xl mt-4 pt-10 pb-10">
                         <!-- First Pricing Calculation  Term Container-->
                         <div class="flex gap-8 justify-center border-b-[1px] border-dashed border-[#03071233]">
                             <div>Seat
@@ -346,7 +348,7 @@
 
                         </div>
                         <!-- Total Price Here -->
-                        <div class="flex gap-8 justify-around border-b-[1px] border-dashed border-[#03071233]">
+                        <div class="flex gap-8 justify-around border-b-[1px] border-dashed border-[#03071233] py-4">
                             <div>Total
 
                             </div>
@@ -354,20 +356,61 @@
 
                         </div>
                         <!-- Coupon Field -->
-                        <div class="join flex justify-center">
+                        <div class="join flex justify-center py-4">
                             <input class="input input-bordered join-item" placeholder="Have any coupon?" />
                             <button class="btn join-item rounded-r-full">Apply</button>
                         </div>
                         <!-- Grand Total Price Here -->
-                        <div class="flex gap-8 justify-around border-b-[1px] border-dashed border-[#03071233]">
+                        <div class="flex gap-8 justify-around pt-4">
                             <div>Grand Total
 
                             </div>
                             <div>BDT <span>0</span></div>
 
                         </div>
+
+                    </div>
+                    <!-- Passenger Information Taking Form -->
+                    <div>
+                        <!-- Passenger Name Here -->
+                        <label class="form-control w-full inter-font">
+                            <div class="label">
+                                <span class="label-text mt-2 text-xl  font-semibold text-[#030712]">Passenger
+                                    Name*</span>
+                            </div>
+                            <input type="text" placeholder="Enter your name" class="input input-bordered my-4 w-full "
+                                required />
+                        </label>
+                        <!-- Passenger Phone Number Here -->
+                        <label class="form-control w-full inter-font">
+                            <div class="label">
+                                <span class="label-text mt-2 text-xl  font-semibold text-[#030712]">Phone Number*</span>
+                            </div>
+                            <input type="number" placeholder="Enter your name" class="input input-bordered my-4 w-full "
+                                required />
+                        </label>
+                        <!-- Passenger Email Id here -->
+                        <label class="form-control w-full inter-font">
+                            <div class="label">
+                                <span class="label-text mt-2 text-xl  font-semibold text-[#030712]">Email ID*</span>
+                            </div>
+                            <input type="email" placeholder="Enter your email id"
+                                class="input input-bordered my-4 w-full " required />
+                        </label>
+                        <!-- Submit information here -->
+                        <label for="submit_info" class="form-control w-full ">
+                            <input type="submit" class="btn bg-[#1DD100] text-white hover:bg-[#1DD100]" value="Next"
+                                required>
+                        </label>
+                    </div>
+                    <div class="flex justify-around mt-6">
+                        <div> <a href="./docs/tac.txt" class=" text-[#03071299] hover:underline">Terms and
+                                Conditions</a></div>
+                        <div> <a href="./docs/cpolicy.txt" class=" text-[#03071299] hover:underline">Cancellation
+                                Policy</a></div>
                     </div>
                 </div>
+
             </section>
         </section>
     </main>
