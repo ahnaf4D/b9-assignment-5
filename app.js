@@ -17,29 +17,38 @@ let seatRemain = document.getElementById("seat-left");
 const seatCountValue = parseInt(seatCountText);
 const selectSeatsArr = Array.prototype.slice.call(selectSeats);
 let count = 0;
+let appendChild = 0;
+const maxChildren = 4;
 for (const seat of selectSeatsArr) {
   const allSeat = seat;
   allSeat.addEventListener("click", function (event) {
-    count = count + 1;
-    allSeat.style.backgroundColor = "#1DD100";
-    seatCount.innerText = count;
+    if (appendChild < maxChildren) {
+      count = count + 1;
+      allSeat.style.backgroundColor = "#1DD100";
+      seatCount.innerText = count;
 
-    const seatCountValue = parseInt(seatCount.innerText);
-    seatRemain.innerText -= 1;
-    const seatPosition = event.target.innerText;
-    let createP = document.createElement("p");
-    createP.innerText = `${seatPosition} Economoy 550`;
-    createP.classList.add(
-      `text-center`,
-      `block`,
-      `inter-font`,
-      `text-[#03071299]`,
-      `font-normal`
-    );
-    seatAdding.classList.add(`text-center`);
-    seatAdding.appendChild(createP);
+      const seatCountValue = parseInt(seatCount.innerText);
+      seatRemain.innerText -= 1;
+      const seatPosition = event.target.innerText;
+      let createP = document.createElement("p");
+      createP.innerText = `${seatPosition} Economoy 550`;
+      createP.classList.add(
+        `text-center`,
+        `block`,
+        `inter-font`,
+        `text-[#03071299]`,
+        `font-normal`
+      );
+      seatAdding.classList.add(`text-center`);
+      seatAdding.appendChild(createP);
+      appendChild++;
+    } else {
+      alert("Every user cut maximum 4 seats");
+    }
     const finalBusFare = busFareValue * seatCountValue;
     totalPrice.innerText = `${finalBusFare}`;
     grandTotal.innerText = `${finalBusFare}`;
   });
 }
+
+//
