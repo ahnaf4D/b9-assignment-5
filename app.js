@@ -1,6 +1,6 @@
 const selectSeats = document.querySelectorAll(".seat-number");
 const seatAdding = document.getElementById("seat-adding");
-const totalPrice = document.getElementById("total-price");
+let totalPrice = document.getElementById("total-price");
 const grandTotal = document.getElementById("grand-total-fare");
 // Per Bus Fare
 const busFare = document.getElementById("per-fare");
@@ -17,10 +17,11 @@ let seatRemain = document.getElementById("seat-left");
 const seatCountValue = parseInt(seatCountText);
 const selectSeatsArr = Array.prototype.slice.call(selectSeats);
 let count = 0;
+// ========================
 for (const seat of selectSeatsArr) {
   const allSeat = seat;
   allSeat.addEventListener("click", function (event) {
-    count += 1;
+    count = count + 1;
     allSeat.style.backgroundColor = "#1DD100";
     seatCount.innerText = count;
 
