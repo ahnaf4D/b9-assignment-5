@@ -50,5 +50,3 @@ for (const seat of selectSeatsArr) {
     grandTotal.innerText = `${finalBusFare}`;
   });
 }
-
-//
