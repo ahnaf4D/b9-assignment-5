@@ -42,11 +42,11 @@ for (const seat of selectSeatsArr) {
       seatAdding.classList.add(`text-center`);
       seatAdding.appendChild(createP);
       appendChild++;
+      const finalBusFare = busFareValue * seatCountValue;
+      totalPrice.innerText = `${finalBusFare}`;
+      grandTotal.innerText = `${finalBusFare}`;
     } else {
       alert("Every user cut maximum 4 seats");
     }
-    const finalBusFare = busFareValue * seatCountValue;
-    totalPrice.innerText = `${finalBusFare}`;
-    grandTotal.innerText = `${finalBusFare}`;
   });
 }
