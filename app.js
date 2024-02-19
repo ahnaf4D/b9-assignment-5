@@ -17,7 +17,6 @@ let seatRemain = document.getElementById("seat-left");
 const seatCountValue = parseInt(seatCountText);
 const selectSeatsArr = Array.prototype.slice.call(selectSeats);
 let count = 0;
-// ========================
 for (const seat of selectSeatsArr) {
   const allSeat = seat;
   allSeat.addEventListener("click", function (event) {
